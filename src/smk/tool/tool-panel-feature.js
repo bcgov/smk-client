@@ -12,7 +12,7 @@ include.module( 'tool.tool-panel-feature-js', [
         this.defineProp( 'resultPosition' )
         this.defineProp( 'resultCount' )
         this.defineProp( 'instance' )
-        this.defineProp( 'attributeView' )
+        this.defineProp( 'attributeMode' )
         this.defineProp( 'command' )
         this.defineProp( 'attributes' )
 
@@ -35,6 +35,10 @@ include.module( 'tool.tool-panel-feature-js', [
                     smk.$sidepanel.incrExpand( -1 )
                 }
             } )
+
+            // TODO remove, attributeView deprecated
+            if ( this.attributeView ) 
+                this.attributeMode = this.attributeView
         } )
 
         this.setAttributeComponent = function ( layer, feature ) {

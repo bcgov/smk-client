@@ -23,7 +23,7 @@ This is default configuration for the Bespoke tool (click on a property name for
 
 ## Handlers
 
-Unless you specify a static template for the component property, then you will need to use SMK handlers in your application to get notified when the panel is opened.
+Unless you specify a static template for the [`"component"` property](#component-property), then you will need to use SMK handlers in your application to get notified when the panel is opened.
 Then the application will be able to set the component property with the content that is needed at that moment.
 
 Handlers can be configured after `smk.js` is loaded into the application, either before or after the map is initialized.
@@ -35,7 +35,7 @@ To set a handler, make this method call:
 
 Where:
 
-- `<<id>>` is the tool id as described in the [instance property](#instance-property).
+- `<<id>>` is the tool id as described in the [`"instance"` property](#instance-property).
 - `<<method>>` is one of:
     - `"initialized"`: fired when the map is initialized
     - `"activated"`: fired when the tool is activated (button in toolbar is clicked, and tool wasn't active)
@@ -60,7 +60,7 @@ Where:
 This tool is allowed to have multiple instances in an application.
 The instance property must be defined with an application-unique value for each use of the bespoke tool in the application configuration.
 
-The [handlers](#handlers) defined for this tool will use the instance id as part of the id passed to the HANDLER methods, it is concantenated with the [type](#type-property) seperated by `"--"`.
+The [handlers](#handlers) defined for this tool will use the instance id as part of the id passed to the HANDLER methods, it is concantenated with the [`"type"` property](#type-property) seperated by `"--"`.
 
 For example, if the instance is `"foo1"` then the id given to the HANDLER methods would be `"bespoke--foo1"`.
 

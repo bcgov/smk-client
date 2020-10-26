@@ -28,10 +28,9 @@ Click on a property name for more information:
 `"type": String`
 
 The type of map viewer to use.
-There are two options:
+There is one option:
 
 - `"leaflet"` - use the [Leaflet](https://leafletjs.com/) viewer.
-- `"esri3d"` - use the [ESRI ArcGIS 3D](https://developers.arcgis.com/javascript/) viewer.
 
 
 ## Device Property

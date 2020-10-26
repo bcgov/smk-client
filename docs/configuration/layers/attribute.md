@@ -7,7 +7,7 @@ This object defines the appearance of an attribute from a layer's dataset, when 
 The `"attributes"` property of a layer, will have list of these objects.
 This determines the order the attributes will appear in the feature detail panel.
 
-The formatting defined by these properties only applies when the feature is displayed with an ["attributeView" property](../tools/identify#attributeView-property) for the tool that is equal to `"feature-attributes"`.
+The formatting defined by these properties only applies when the feature is displayed with an ["attributeMode" property](../tools/identify#attributeMode-property) for the tool that is equal to `"feature-attributes"`.
 
 This object is to be defined for each attribute, with the default values.
 Click on a property name for more information:

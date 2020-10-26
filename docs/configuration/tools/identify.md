@@ -27,7 +27,7 @@ This is default configuration for the Identify tool (click on a property name fo
         <a href="#radiusunit-sub-property"      >"radiusUnit"</a>:    false,
         <a href="#nearby-sub-property"          >"nearBy"</a>:        true
     },
-    <a href="#attributeview-property"  >"attributeView"</a>:  "default",
+    <a href="#attributemode-property"  >"attributeMode"</a>:  "default",
     <a href="#radius-property"         >"radius"</a>:         5,
     <a href="#radiusunit-property"     >"radiusUnit"</a>:     "px",
     <a href="#internallayers-property" >"internalLayers"</a>: [ ... ]
@@ -85,8 +85,8 @@ If `true`, shows the search radius units drop-down.
 If `true`, shows a button that does the identify query at the devices current location.
 
 
-## AttributeView Property
-`"attributeView"`: `String`
+## AttributeMode Property
+`"attributeMode"`: `String`
 
 Determines how the attributes are presented for a feature.
 These are the possible modes:
@@ -98,8 +98,8 @@ These are the possible modes:
 
 #### Note
 
-One of the modes possible when `attributeView == "default"` is one that uses the feature template defined for the layer.
-This mode is the most preferred one if possible, but it is not possible to force `attributeView` to always use it.
+One of the modes possible when `attributeMode == "default"` is one that uses the feature template defined for the layer.
+This mode is the most preferred one if possible, but it is not possible to force `attributeMode` to always use it.
 
 
 ## Radius Property

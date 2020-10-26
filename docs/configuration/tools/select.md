@@ -26,7 +26,7 @@ This is default configuration for the Select tool (click on a property name for 
         <a href="#clear-sub-property"           >"clear"</a>:         true,
         <a href="#remove-sub-property"          >"remove"</a>:        true,
     },
-    <a href="#attributeview-property"  >"attributeView"</a>:  "default",
+    <a href="#attributemode-property"  >"attributeMode"</a>:  "default",
 } ] }
 </pre>
 
@@ -76,8 +76,8 @@ If `true`, shows a button to clear the selection.
 If `true`, shows a button to remove a feature from the selection.
 
 
-## AttributeView Property
-`"attributeView"`: `String`
+## AttributeMode Property
+`"attributeMode"`: `String`
 
 Determines how the attributes are presented for a feature.
 These are the possible modes:
@@ -89,6 +89,6 @@ These are the possible modes:
 
 #### Note
 
-One of the modes possible when `attributeView == "default"` is one that uses the feature template defined for the layer.
-This mode is the most preferred one if possible, but it is not possible to force `attributeView` to always use it.
+One of the modes possible when `attributeMode == "default"` is one that uses the feature template defined for the layer.
+This mode is the most preferred one if possible, but it is not possible to force `attributeMode` to always use it.
 

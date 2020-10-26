@@ -10,7 +10,7 @@ include.module( 'tool-config.tool-panel-feature-config-js', [], function ( inc )
         }, cfg.command )
 
         return Object.assign( {
-            attributeView: 'default',
+            attributeMode: 'default',
         }, cfg )
     }
 } )

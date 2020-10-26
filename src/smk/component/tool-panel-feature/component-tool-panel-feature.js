@@ -6,7 +6,6 @@ include.module( 'component-tool-panel-feature', [
     'component-feature-description',
     'component-command-button',
     'component-tool-panel-feature.component-tool-panel-feature-html' 
-    // 'widgets'
 ], function ( inc ) {
     "use strict";
 
@@ -21,13 +20,9 @@ include.module( 'component-tool-panel-feature', [
             'resultPosition', 
             'resultCount', 
             'instance', 
-            'command' 
+            'command',
+            'attributeMode'
         ],
-        data: function () {
-            return {
-                'attributeView': 'default'
-            }
-        },
         computed: {
             attributes: {
                 get: function () {

@@ -28,7 +28,7 @@ This is default configuration for the Query tool (click on a property name for m
         <a href="#attributemode-sub-property"   >"attributeMode"</a>: false,
         <a href="#within-sub-property"          >"within"</a>:        true,
     },
-    <a href="#attributeview-property"  >"attributeView"</a>:  "default",
+    <a href="#attributemode-property"  >"attributeMode"</a>:  "default",
     <a href="#within-property"         >"within"</a>:         false,
 } ] }
 </pre>
@@ -88,8 +88,8 @@ If `true`, shows a drop-down list for selecting how the feature attributes shoul
 If `true`, shows a toggle for selecting search mode.
 
 
-## AttributeView Property
-`"attributeView"`: `String`
+## AttributeMode Property
+`"attributeMode"`: `String`
 
 Determines how the attributes are presented for a feature.
 These are the possible modes:
@@ -101,8 +101,8 @@ These are the possible modes:
 
 #### Note
 
-One of the modes possible when `attributeView == "default"` is one that uses the feature template defined for the layer.
-This mode is the most preferred one if possible, but it is not possible to force `attributeView` to always use it.
+One of the modes possible when `attributeMode == "default"` is one that uses the feature template defined for the layer.
+This mode is the most preferred one if possible, but it is not possible to force `attributeMode` to always use it.
 
 
 ## Within Property

@@ -32,7 +32,7 @@
 
         <select class="smk-command smk-attribute-mode" 
             v-if="layer && command.attributeMode"
-            v-model="attributeView"
+            v-model="attributeMode"
         >
             <option value="default">Default View</option>        
             <option v-bind:value="'feature-template-' + layer.id"
@@ -50,7 +50,7 @@
     <component class="smk-feature"
         v-if="layer"
         v-bind:key="layer.id"
-        v-bind:is="attributeView == 'default' ? attributeComponent : attributeView"
+        v-bind:is="attributeMode == 'default' ? attributeComponent : attributeMode"
         v-bind="{
             layer:      layer,
             feature:    feature,
