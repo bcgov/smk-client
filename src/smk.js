@@ -418,10 +418,10 @@
                         {
                             type: 'query',
                             instance: layerId + '--' + queryId,
-                            xonActivate: 'execute',
                             enabled: true,
                             position: 'toolbar',
-                            command: { attributeMode: true }
+                            command: { attributeMode: true },
+                            onActivate: 'execute'
                         },
                         {
                             type: 'toolbar',
@@ -514,10 +514,10 @@
                     {
                         type: 'query',
                         instance: layerId + '--' + queryId,
-                        xonActivate: 'execute',
                         enabled: true,
                         position: 'toolbar',
-                        command: { attributeMode: true }
+                        command: { attributeMode: true },
+                        onActivate: 'execute'
                     },
                     {
                         type: 'toolbar',

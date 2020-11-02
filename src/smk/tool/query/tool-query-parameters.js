@@ -66,6 +66,7 @@ include.module( 'tool-query.tool-query-parameters-js', [
                             smk.emit( self.id, 'execute' )
                             break
                         }
+                        self.onActivate = null
                     }
                 }
             } )
