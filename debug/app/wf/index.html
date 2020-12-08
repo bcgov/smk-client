@@ -60,6 +60,36 @@
         <div id="smk-map-frame"></div>
     </body>
 
+    <!-- './assets/js/smk/map-config.json',
+    './assets/js/smk/layers/active-wildfires.json',
+    './assets/js/smk/layers/area-restrictions.json',
+    './assets/js/smk/layers/bans-and-prohibitions.json',
+    './assets/js/smk/layers/bc-fire-centres.json',
+    './assets/js/smk/layers/bcws-activefires-publicview-inactive.json',
+    './assets/js/smk/layers/closed-recreation-sites.json',
+    './assets/js/smk/layers/danger-rating.json',
+    './assets/js/smk/layers/drive-bc-active-events.json',
+    JSON.stringify({ 'layers': [{ id: 'drive-bc-active-events', serviceUrl: driveBcBaseUrl || 'https://maps.th.gov.bc.ca/geoV05/ows'}]}),
+    './assets/js/smk/layers/evacuation-orders-and-alerts.json',
+    './assets/js/smk/layers/evacuation-orders-and-alerts-wms.json',
+    './assets/js/smk/layers/fire-perimeters.json',
+    './assets/js/smk/layers/prescribed-fire.json',
+    './assets/js/smk/layers/weather.json',
+    './assets/js/smk/layers/smoke.json',
+    // './assets/js/smk/layers/whse-land-and-natural-resource-prot-current-fire-polys-sp.json',
+    JSON.stringify( { 'layers': openmapsLayers.map( id => { return {
+            id: id,
+            serviceUrl: openmapsBaseUrl || "https://delivery.openmaps.gov.bc.ca/geo/pub/ows"
+        }; } ) } ),
+    './assets/js/smk/layer-display-config.json',
+    `{ "viewer": { "device": "${ deviceMode }" } }`,
+    `{ "layers": [ { "id": "bans-and-prohibitions-highlight", "sld": "@${window.location.protocol}//${window.location.host}/assets/js/smk/bans-and-prohibitions-highlight.sld" } ] }`,
+    // 'show-tool=coordinate',                
+    // self.queryAll('evacuation-orders-and-alerts','esri', 'Fire Evacuation Orders and Alerts (ESRI)'),
+    // self.queryAll('evacuation-orders-and-alerts-wms','wms', 'Fire Evacuation Orders and Alerts (WMS)'),
+    'theme=wf', '?' -->
+
+
     <script>
         SMK.INIT( {
             'smk-container-sel': "#smk-map-frame",
@@ -74,9 +104,11 @@
                 './layers/closed-recreation-sites.json',
                 './layers/danger-rating.json',
                 './layers/drive-bc-active-events.json',
-                './layers/evacuation-orders-and-alerts.json',
+                './layers/evacuation-orders-and-alerts-wms.json',
                 './layers/fire-perimeters.json',
                 './layers/prescribed-fire.json',
+                './layers/weather.json',
+                './layers/smoke.json',
                 // './layers/whse-land-and-natural-resource-prot-current-fire-polys-sp.json',
                 './layer-display-config.json', 
                 'theme=wf', '?' 
@@ -101,7 +133,7 @@
                 tool.content = '<div>I am a legend in my own mind</div>'
             } )
 
-            include( 'feature-list' ).then( function () {
+            include( 'component' ).then( function () {
                 Vue.component( 'wf-feature', {
                     template: '#wf-feature-template',
                     extends: SMK.TYPE.VueFeatureComponent

@@ -1,0 +1,37 @@
+{
+  "layers": [
+    {
+      "type": "wms",
+      "id": "closed-recreation-sites-wms",
+      "title": "Closed Recreation Sites",
+      "#serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows",
+      "serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "layerName": "pub:WHSE_FOREST_TENURE.FTEN_REC_SITE_POINTS_SVW",
+      "styleName": "3432",
+      "where": "CLOSURE_DESCRIPTION is not null",
+      "#metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
+      "#scaleMin": 500000,
+      "scaleMax": 3000000,
+      "titleAttribute": "PROJECT_NAME",
+      "popupTemplate": "@wf-feature",
+      "attributes": [
+        {
+          "name": "PROJECT_NAME",
+          "title": "Name"
+        },
+        {
+          "name": "SITE_LOCATION",
+          "title": "Site Location"
+        },
+        {
+          "name": "PROJECT_DESCRIPTION",
+          "title": "Site Description"
+        },
+        {
+          "name": "CLOSURE_DESCRIPTION",
+          "title": "Closure Comments"
+        }
+      ]
+    }
+  ]
+}

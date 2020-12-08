@@ -20,28 +20,6 @@
               "title": "Danger Rating"
           }
       ]
-    },
-
-    {
-      "type": "esri-feature",
-      "id": "danger-rating-esri",
-      "title": "BC Wildfire Danger Rating (ESRI)",
-      "isQueryable": true,
-      "attribution": "Copyright 117 DataBC, Government of British Columbia",
-      "serviceUrl": "https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/British_Columbia_Danger_Rating/FeatureServer/0",
-      "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
-      "where": "",
-      "opacity": 0.25,
-      "#scaleMin": 500000,
-      "#scaleMax": 0,
-      "popupTemplate": "@wf-feature",
-      "titleAttribute": "LABEL",
-      "attributes": [
-          {
-              "name": "LABEL",
-              "title": "Danger Rating"
-          }
-      ]
     }
   ]
 }

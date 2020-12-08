@@ -54,7 +54,7 @@
       "showTitle": false,
       "showWidget": false,
       "position": "shortcut-menu",
-      "tolerance": 10,
+      "tolerance": 20,
       "command": {
         "attributeMode": false,
         "clear": false

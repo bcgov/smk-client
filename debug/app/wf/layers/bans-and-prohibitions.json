@@ -41,50 +41,15 @@
     },
 
     {
-      "type": "esri-feature",
-      "id": "bans-and-prohibitions-esri",
-      "title": "BC Wildfire Bans and Prohibitions (ESRI)",
-      "attribution": "Copyright 117 DataBC, Government of British Columbia",
-      "attributes": [
-        {
-          "name": "FireCentre",
-          "title": "Fire Centre"
-        },
-        {
-          "name": "Name",
-          "title": "Name"
-        },
-        {
-          "name": "DateActive",
-          "title": "Date Active",
-          "format": "asLocalDate"
-        },
-        {
-          "name": "DateDeactivated",
-          "title": "Date Deactivated",
-          "format": "asLocalDate"
-        },
-        {
-          "name": "Type",
-          "title": "Type"
-        },
-        {
-          "name": "Comments",
-          "title": "Comments"
-        },
-        {
-          "title": "More Information",
-          "value": "See Here",
-          "format": "asLink(this.feature.properties.URL)"
-        }
-      ],
-      "serviceUrl": "https://services6.arcgis.com/ubm4tcTYICKBpist/ArcGIS/rest/services/British_Columbia_Bans_and_Prohibition_Areas/FeatureServer/0",
-      "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
-      "where": "",
-      "scaleMin": 500000,
-      "scaleMax": 0,
-      "popupTemplate": "@wf-feature",
-      "titleAttribute": "FireCentre"
+      "type": "wms",
+      "id": "bans-and-prohibitions-highlight",
+      "title": "BC Wildfire Bans and Prohibitions",
+      "serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows",
+      "#serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "layerName": "pub:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_BANS_AND_PROHIBITIONS_SP",
+      "sld": "@bans-and-prohibitions-highlight.sld",
+      "opacity": 0.8
     }
+
   ]
 }

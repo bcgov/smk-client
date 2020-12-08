@@ -1,0 +1,19 @@
+{
+    "layers": [
+        {
+            "type": "wms",
+            "id": "hourly--currentforecast-firesmoke-legend",
+            "title": "Smoke Forecast, Hourly",
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": null,
+            "maxScale": null,
+            "titleAttribute": null,
+            "attributes": false,
+            "queries": null,
+            "serviceUrl": "https://bluesky4.eos.ubc.ca/geoserver/CurrentForecast/wms",
+            "layerName": "hourly",
+            "styleName": "CurrentForecast:firesmoke_legend"
+        }
+    ]
+}

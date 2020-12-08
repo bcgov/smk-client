@@ -54,9 +54,13 @@ include.module( 'tool-layers', [
                 smk.$viewer.setDisplayContextItems( this.type, this.display )
 
             self.changedActive( function () {
-                if ( !self.active ) return
-
-                self.contexts = smk.$viewer.getDisplayContexts()
+                if ( self.active ) {
+                    self.contexts = smk.$viewer.getDisplayContexts()
+                    SMK.HANDLER.get( self.id, 'activated' )( smk, self )
+                }
+                else {
+                    SMK.HANDLER.get( self.id, 'deactivated' )( smk, self )
+                }
             } )
 
             smk.on( this.id, {

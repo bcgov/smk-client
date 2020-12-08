@@ -1,24 +1,8 @@
 {
   "layers": [
     {
-      "type": "wms",
-      "id": "bc-fire-centres",
-      "title": "BC Wildfire Fire Centres",
-      "serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows",
-      "#serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
-      "layerName": "pub:WHSE_LEGAL_ADMIN_BOUNDARIES.DRP_MOF_FIRE_CENTRES_SP,pub:WHSE_LEGAL_ADMIN_BOUNDARIES.DRP_MOF_FIRE_CENTRES_SP",
-      "#styleName": "3458_3459_4837",
-      "styleName": "3458,4837",
-      "where": "include;include",
-      "isQueryable": false,
-      "#metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
-      "#scaleMin": 500000,
-      "#scaleMax": 3000000
-    },
-
-    {
       "type": "esri-tiled",
-      "id": "bc-fire-centres-esri",
+      "id": "bc-fire-centres",
       "title": "BC Wildfire Fire Centres",
       "isQueryable": false,
       "attribution": "Copyright 117 DataBC, Government of British Columbia",

@@ -1,16 +1,20 @@
 {
   "layers": [
     {
-      "type": "esri-feature",
-      "id": "fire-perimeters",
+      "type": "wms",
+      "id": "fire-perimeters-wms",
       "title": "BC Wildfire Fire Perimeters",
-      "attribution": "Copyright 117 DataBC, Government of British Columbia",
-      "serviceUrl": "https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/BCWS_FirePerimeters_PublicView/FeatureServer/0",
-      "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
+      "isQueryable": true,
+      "serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows",
+      "#serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "layerName": "pub:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP",
+      "styleName": "1751_1752",
       "where": "FIRE_STATUS <> 'Out'",
-      "opacity": 1,
-      "scaleMin": 500000,
-      "scaleMax": 0,
+      "#metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
+      "#scaleMin": 500000,
+      "#scaleMax": 0,
+      "popupTemplate": "@wf-feature",
+      "titleAttribute": "FIRE_NUMBER",
       "attributes": [
         {
           "name": "FIRE_NUMBER",
@@ -30,9 +34,7 @@
           "title": "Fire of Note Information",
           "format": "asLink(this.feature.properties.FIRE_OF_NOTE_URL)"
         }
-      ],
-      "popupTemplate": "@wf-feature",
-      "titleAttribute": "FIRE_NUMBER"
+      ]
     }
   ]
 }

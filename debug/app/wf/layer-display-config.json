@@ -3,38 +3,38 @@
         {
             "type": "layers",
             "display": [
-                { "#id": "active-wildfires", "isVisible": true },
-                { "id": "active-wildfires-esri", "isVisible": true, "alwaysShowLegend": true  },
+                { "id": "active-wildfires", "isVisible": true, "alwaysShowLegend": true },
 
-                { "#id": "bcws-activefires-publicview-inactive", "isVisible": false },
-                { "id": "bcws-activefires-publicview-inactive-esri", "isVisible": false },
+                { "id": "bcws-activefires-publicview-inactive", "isVisible": false },
 
-                { "id": "danger-rating", "isVisible": false, "alwaysShowLegend": true  },
-                { "#id": "danger-rating-esri", "isVisible": false },
+                { "id": "danger-rating", "isVisible": false, "alwaysShowLegend": true },
 
-                { "#id": "evacuation-orders-and-alerts", "isVisible": true },
-                { "id": "evacuation-orders-and-alerts-esri", "isVisible": true, "alwaysShowLegend": true },
+                { "id": "evacuation-orders-and-alerts", "isVisible": false, "alwaysShowLegend": false },
+                { "id": "evacuation-orders-and-alerts-wms", "isVisible": true, "alwaysShowLegend": true },
 
-                { "#id": "fire-perimeters", "isVisible": true },
-                { "id": "fire-perimeters-esri", "isVisible": true },
+                { "id": "fire-perimeters", "isVisible": true },
 
-                { "#id": "bc-fire-centres", "isVisible": true },
-                { "id": "bc-fire-centres-esri", "isVisible": true },
+                { "id": "bc-fire-centres", "isVisible": true },
 
                 { "id": "bans-and-prohibitions", "isVisible": false },
-                { "#id": "bans-and-prohibitions-esri", "isVisible": false },
+
+                { "id": "bans-and-prohibitions-highlight", "isVisible": false, "showItem": false },
 
                 { "id": "area-restrictions", "isVisible": false },
-                { "#id": "area-restrictions-esri", "isVisible": false },
 
                 { "#id": "whse-land-and-natural-resource-prot-current-fire-polys-sp", "isVisible": false },
 
-                { "#id": "prescribed-fire", "isVisible": false },
+                { "id": "prescribed-fire", "isVisible": false },
 
-                { "#id": "closed-recreation-sites", "isVisible": false },
-                { "id": "closed-recreation-sites-esri", "isVisible": false },
+                { "id": "closed-recreation-sites", "isVisible": false },
 
-                { "id": "drive-bc-active-events", "isVisible": false }
+                { "id": "drive-bc-active-events", "isVisible": false },
+
+                { "id": "current-conditions--default", "isVisible": true },
+
+                { "id": "radar-1km-rrai--radarurpprecipr14-linear", "isVisible": false },
+
+                { "id": "hourly--currentforecast-firesmoke-legend", "isVisible": false }
             ]
         }
     ]

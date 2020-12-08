@@ -39,6 +39,8 @@ include.module( 'smk-map', [ 'libs', 'util', 'theme-base', 'sidepanel', 'status-
                 top:        p.top + container.outerHeight() / 2 - 32,
             } )
 
+        container.empty()
+
         this.$container = container.get( 0 )
 
         return SMK.UTIL.resolved()

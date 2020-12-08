@@ -19,31 +19,59 @@ include.module( 'layer-leaflet.layer-wms-leaflet-js', [ 'layer.layer-wms-js' ], 
         var opacity     = layers[ 0 ].config.opacity
         var where       = layers.map( function ( c ) { return c.config.where || 'include' } ).join( ';' )
 
-        var layer = L.nonTiledLayer.wms( serviceUrl, {
-            layers:         layerNames,
-            styles:         styleNames,
-            version:        version,
-            attribution:    attribution,
-            opacity:        opacity,
-            format:         'image/png',
-            transparent:    true,
-            zIndex:         zIndex,
-            cql_filter:     where
-        } )
-
-        layer.on( 'load', function ( ev ) {
-            layers.forEach( function ( ly ) {
-                ly.loading = false
+        return resolveSLD( this, layers[ 0 ].config.sld ).then( function ( sld ) {
+            var layer = L.nonTiledLayer.wms( serviceUrl, {
+                layers:         layerNames,
+                styles:         styleNames,
+                version:        version,
+                attribution:    attribution,
+                opacity:        opacity,
+                format:         'image/png',
+                transparent:    true,
+                zIndex:         zIndex,
+                cql_filter:     where
             } )
-        } )
-
-        layer.on( 'loading', function ( ev ) {
-            layers.forEach( function ( ly ) {
-                ly.loading = true
+    
+            if ( sld ) {
+                layer.wmsParams.sld_body = sld
+                delete layer.wmsParams.styles
+            }
+    
+            layer.on( 'load', function ( ev ) {
+                layers.forEach( function ( ly ) {
+                    ly.loading = false
+                } )
             } )
+    
+            layer.on( 'loading', function ( ev ) {
+                layers.forEach( function ( ly ) {
+                    ly.loading = true
+                } )
+            } )
+    
+            return layer    
         } )
-
-        return layer
     }
 
+    function resolveSLD( viewer, sld ) {
+        if ( !sld ) return Promise.resolve()
+
+        if ( sld.startsWith( '@' ) ) {
+            var url = sld.substr( 1 )
+            return fetch( url )
+                .then( function ( resp ) {
+                    if ( resp.status !== 200 ) throw Error( 'fetching ' + url + ': ' + resp.statusText )
+                    return resp.text()
+                } )
+                .then( function ( text ) {
+                    return text.replace( /\s+/g, ' ' ).replace( /[>] [<]/g, '><' )
+                } )
+                .catch( function ( err ) {
+                    console.warn( err )
+                    return 
+                } )
+        }
+
+        return Promise.resolve( sld )
+    }
 } )

@@ -1,23 +1,26 @@
 {
   "layers": [
     {
-      "type": "esri-feature",
-      "id": "evacuation-orders-and-alerts",
-      "title": "Fire Evacuation Orders and Alerts (ESRI)",
+      "type": "wms",
+      "id": "evacuation-orders-and-alerts-wms",
+      "title": "Fire Evacuation Orders and Alerts",
+      "serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows", 
+      "#serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "layerName": "pub:WHSE_HUMAN_CULTURAL_ECONOMIC.EMRG_ORDER_AND_ALERT_AREAS_SP",
+      "styleName": "6885",
       "isQueryable": true,
-      "attribution": "Copyright 117 DataBC, Government of British Columbia",
-      "serviceUrl": "https://services6.arcgis.com/ubm4tcTYICKBpist/ArcGIS/rest/services/Evacuation_Orders_and_Alerts/FeatureServer/0",
-      "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
+
       "where": "ORDER_ALERT_STATUS <> 'All Clear' and EVENT_TYPE = 'Fire'",
       "opacity": 0.25,
       "scaleMin": 500000,
       "scaleMax": 0,
+
       "popupTemplate": "@wf-feature",
       "titleAttribute": "EVENT_NAME",
       "attributes": [
         {
-            "name": "EVENT_NAME",
-            "title": "Name"
+          "name": "EVENT_NAME",
+          "title": "Name"
         },
         {
             "name": "EVENT_TYPE",

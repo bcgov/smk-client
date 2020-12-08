@@ -70,6 +70,8 @@ include.module( 'tool-identify.tool-identify-list-js', [
 
             self.changedActive( function () {
                 if ( self.active ) {
+                    SMK.HANDLER.get( self.id, 'activated' )( smk, self )
+
                     if ( self.onActivate ) {
                         switch ( self.onActivate ) {
                         case 'current-location':
@@ -77,6 +79,9 @@ include.module( 'tool-identify.tool-identify-list-js', [
                             break
                         }
                     }
+                }
+                else {
+                    SMK.HANDLER.get( self.id, 'deactivated' )( smk, self )
                 }
             } )
 

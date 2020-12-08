@@ -199,12 +199,14 @@ include.module( 'viewer-leaflet', [ 'viewer', 'leaflet', 'layer-leaflet', /*'fea
 
     function createBasemapEsri( id ) {
         /* jshint -W040 */
+        var opt = Object.assign( { detectRetina: true }, this.option )
+
         var lys = []
-        lys.push( L.esri.basemapLayer( id, { detectRetina: true } ) )
+        lys.push( L.esri.basemapLayer( id, opt ) )
 
         if ( this.labels )
             this.labels.forEach( function ( lid ) {
-                lys.push( L.esri.basemapLayer( lid, { detectRetina: true } ) )
+                lys.push( L.esri.basemapLayer( lid, opt ) )
             } )
 
         return lys

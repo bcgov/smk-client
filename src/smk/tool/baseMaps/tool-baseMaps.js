@@ -72,14 +72,23 @@ include.module( 'tool-baseMaps', [
             this.current = smk.viewer.baseMap
 
             this.changedActive( function () {
-                if ( !self.active ) return
-                if ( self.showPanel === false ) return
+                if ( self.active ) {
+                    if ( self.showPanel === false ) {
+                        SMK.HANDLER.get( self.id, 'triggered' )( smk, self )
+                    }
+                    else {
+                        SMK.HANDLER.get( self.id, 'activated' )( smk, self )
 
-                Vue.nextTick( function () {
-                    self.basemaps.forEach( function ( bm ) {
-                        bm.update()
-                    } )
-                } )
+                        Vue.nextTick( function () {
+                            self.basemaps.forEach( function ( bm ) {
+                                bm.update()
+                            } )
+                        } )
+                    }
+                }
+                else {
+                    SMK.HANDLER.get( self.id, 'deactivated' )( smk, self )
+                }
             } )
 
             smk.on( this.id, {

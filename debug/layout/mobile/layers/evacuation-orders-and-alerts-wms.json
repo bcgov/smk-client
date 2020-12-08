@@ -1,0 +1,152 @@
+{
+  "layers": [
+    {
+      "type": "wms",
+      "id": "evacuation-orders-and-alerts-wms",
+      "title": "Fire Evacuation Orders and Alerts",
+      "isVisible": true,
+      "isQueryable": true,
+      "opacity": 0.65,
+      "minScale": null,
+      "maxScale": null,
+      "titleAttribute": null,
+      "attributes": [
+          {
+              "id": "emrg-oaa-sysid",
+              "name": "EMRG_OAA_SYSID",
+              "title": "EMRG OAA SYSID",
+              "visible": true
+          },
+          {
+              "id": "event-name",
+              "name": "EVENT_NAME",
+              "title": "EVENT NAME",
+              "visible": true
+          },
+          {
+              "id": "event-number",
+              "name": "EVENT_NUMBER",
+              "title": "EVENT NUMBER",
+              "visible": true
+          },
+          {
+              "id": "event-type",
+              "name": "EVENT_TYPE",
+              "title": "EVENT TYPE",
+              "visible": true
+          },
+          {
+              "id": "order-alert-status",
+              "name": "ORDER_ALERT_STATUS",
+              "title": "ORDER ALERT STATUS",
+              "visible": true
+          },
+          {
+              "id": "issuing-agency",
+              "name": "ISSUING_AGENCY",
+              "title": "ISSUING AGENCY",
+              "visible": true
+          },
+          {
+              "id": "preoc-code",
+              "name": "PREOC_CODE",
+              "title": "PREOC CODE",
+              "visible": true
+          },
+          {
+              "id": "population",
+              "name": "POPULATION",
+              "title": "POPULATION",
+              "visible": true
+          },
+          {
+              "id": "number-of-homes",
+              "name": "NUMBER_OF_HOMES",
+              "title": "NUMBER OF HOMES",
+              "visible": true
+          },
+          {
+              "id": "date-modified",
+              "name": "DATE_MODIFIED",
+              "title": "DATE MODIFIED",
+              "visible": true
+          },
+          {
+              "id": "feature-area-sqm",
+              "name": "FEATURE_AREA_SQM",
+              "title": "FEATURE AREA SQM",
+              "visible": true
+          },
+          {
+              "id": "feature-length-m",
+              "name": "FEATURE_LENGTH_M",
+              "title": "FEATURE LENGTH M",
+              "visible": true
+          },
+          {
+              "id": "shape",
+              "name": "SHAPE",
+              "title": "SHAPE",
+              "visible": true
+          },
+          {
+              "id": "objectid",
+              "name": "OBJECTID",
+              "title": "OBJECTID",
+              "visible": true
+          },
+          {
+              "id": "se-anno-cad-data",
+              "name": "SE_ANNO_CAD_DATA",
+              "title": "SE ANNO CAD DATA",
+              "visible": true
+          }
+      ],
+      "queries": null,
+      "serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/wms",
+      "layerName": "pub:WHSE_HUMAN_CULTURAL_ECONOMIC.EMRG_ORDER_AND_ALERT_AREAS_SP",
+      "styleName": "6885"
+  },
+
+
+    {
+      "type": "wms",
+      "id": "evacuation-orders-and-alerts-wms1",
+      "title": "Fire Evacuation Orders and Alerts",
+      "#serviceUrl": "https://delivery.openmaps.gov.bc.ca/geo/pub/ows",
+      "serviceUrl": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "layerName": "pub:WHSE_HUMAN_CULTURAL_ECONOMIC.EMRG_ORDER_AND_ALERT_AREAS_SP",
+      "styleName": "6885",
+      "isQueryable": true,
+      "where": "ORDER_ALERT_STATUS <> 'All Clear' and EVENT_TYPE = 'Fire'",
+      "#metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/diagnostic-facilities",
+      "#scaleMin": 500000,
+      "#scaleMax": 3000000,
+      "popupTemplate": "@wf-feature",
+      "titleAttribute": "EVENT_NAME",
+      "attributes": [
+        {
+          "name": "EVENT_NAME",
+          "title": "Name"
+        },
+        {
+            "name": "EVENT_TYPE",
+            "title": "Type"
+        },
+        {
+            "name": "DATE_MODIFIED",
+            "title": "Date",
+            "format": "asLocalDate"
+        },
+        {
+            "name": "ISSUING_AGENCY",
+            "title": "Issuing Agency"
+        },
+        {
+            "name": "ORDER_ALERT_STATUS",
+            "title": "Status"
+        }
+      ]
+    }
+  ]
+}
