@@ -10,7 +10,7 @@ There are a variety of ways to install SMK into your application.
 If you want to create a new application using SMK, then the easiest way is with the `smk-cli`.
 First make sure that the `smk-cli` is installed globally in your machine:
 
-    > npm install --global smk-cli
+    > npm install --global @bcgov/smk-cli
 
 Test that this worked:
 
@@ -31,11 +31,11 @@ Once they are answered you will have a new skeleton application at `projects/my-
 
 In your NPM project, use this command to add SMK as a dependency:
 
-    > npm install smk
+    > npm install @bcgov/smk
 
 Then, in your application you add the SMK library like this:
 
-    <script src="node_modules/smk/dist/smk.js"></script>
+    <script src="node_modules/@bcgov/smk/dist/smk.js"></script>
 
 
 ## Download

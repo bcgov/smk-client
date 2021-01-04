@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "name": "smk",
+  "name": "@bcgov/smk",
   "title": "Simple Map Kit",
   "description": "A simple way to add a map your application.",
   "author": "Ben Jubb <benjubb@gmail.com>",
